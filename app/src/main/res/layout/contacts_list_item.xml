@@ -1,15 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content" android:layout_height="wrap_content"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="10dp"
-    android:id="@+id/parent">
+    android:id="@+id/parent"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="10dp"
+    >
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtName"
-        android:text="ContactName"
-        />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:layout_marginTop="7dp"
+            android:id="@+id/txtName"
+            android:text="ContactName"
+            />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtName"
+            android:textStyle="italic"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/txtEmail"
+            android:text="Email"
+            />
 
-</RelativeLayout>
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:id="@+id/image"
+            android:layout_below="@+id/txtEmail"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/ic_launcher"/>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
